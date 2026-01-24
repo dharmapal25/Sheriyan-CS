@@ -7,14 +7,15 @@ body {
 /* with internet font-family */
 
 h1 {
-      font-family: "Rubik Storm", system-ui;
-      font-size: 100px;
+    font-family: "Rubik Storm", system-ui;
+    font-size: 100px;
 }
 
 div {
     border: 2px solid blue;
     height: 200px;
     width: 500px;
+    margin: 20px;
 }
 
 
@@ -33,7 +34,7 @@ h2 {
 
 
 @font-face {
-    font-family : "Jod";
+    font-family: "Jod";
     src: url("./Storm\ Gust.otf");
 }
 
@@ -42,3 +43,164 @@ h3 {
     font-size: 100px;
 }
 
+
+
+.main {
+    height: 400px;
+    width: 400px;
+    background: #3f1414;
+    border: 2px solid pink;
+}
+
+
+.side-div {
+    background-color: crimson;
+}
+
+.linear-div {
+    background: linear-gradient(to right, red, green);
+}
+
+.radial-div {
+    background: radial-gradient(circle, red, green);
+}
+
+.conic-div {
+    background: conic-gradient(red, yellow, green);
+}
+
+
+.img-div {
+    width: 350px;
+    height: 350px;
+    background: url("./boy.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+
+.box {
+    background: #14534b;
+    border: 1px solid cyan;
+    height: 700px;
+    width: 1200px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box-1 {
+    background: #279485;
+    border: 1px solid cyan;
+    height: 200px;
+    width: 300px;
+    border-radius: 20px;
+
+    flex-shrink: 1;
+}
+
+
+
+.box1 {
+    background: #145317;
+    border: 1px solid #00ff37;
+    height: 700px;
+    width: 1200px;
+    border-radius: 20px;
+
+
+}
+
+.box-2 {
+    background: #468a19;
+    border: 1px solid #00ff40;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    transform: translate(200px, 200px);
+
+}
+
+
+.new {
+    background: #f263ff;
+    border: 1px solid #182a7a;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    transform: matrix(1, 0.5, 1, 30, 30);
+    perspective: 600px;
+
+    transition: background 0.5s;
+
+}
+
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+
+/* grid-column: start-line / end-line;
+grid-row: start-line / end-line; */
+
+
+
+.grid-div {
+    background: #2b033b;
+    border: 1px solid #7be692;
+    height: auto;
+    width: 1000px;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+
+}
+
+.b1 {
+    grid-row: 2/3;
+    width: auto;
+    padding: 5px;
+    background: #4a1a5e;
+    border: 1px solid #4d915c;
+    border-radius: 20px;
+
+}
+
+.b2 {
+    grid-column: 2/4;
+    padding: 5px;
+    width: auto;
+    background: #5e521a;
+    border: 1px solid #4d915c;
+    border-radius: 20px;
+
+}
+
+.b3 {
+    grid-column: 1/4;
+    width: auto;
+    padding: 5px;
+    background: #1a5e29;
+    border: 1px solid #4d915c;
+    border-radius: 20px;
+
+}
+
+.b4 {
+    grid-column: 1/5;
+    width: auto;
+    padding: 5px;
+    background: #1a385e;
+    border: 1px solid #4d915c;
+    border-radius: 20px;
+
+}
