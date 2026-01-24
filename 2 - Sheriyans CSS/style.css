@@ -1,0 +1,44 @@
+body {
+    background: #292929;
+    color: aliceblue;
+}
+
+
+/* with internet font-family */
+
+h1 {
+      font-family: "Rubik Storm", system-ui;
+      font-size: 100px;
+}
+
+div {
+    border: 2px solid blue;
+    height: 200px;
+    width: 500px;
+}
+
+
+/* with local font-family */
+
+@font-face {
+    font-family: "hacker";
+    src: url("./shlop\ rg.otf");
+}
+
+
+h2 {
+    font-family: "hacker";
+    font-size: 100px;
+}
+
+
+@font-face {
+    font-family : "Jod";
+    src: url("./Storm\ Gust.otf");
+}
+
+h3 {
+    font-family: "Jod";
+    font-size: 100px;
+}
+
