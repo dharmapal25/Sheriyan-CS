@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheryians</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./light-logo_lNzGXRRlQ.webp" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav>
+            <div class="logo">
+                <img src="./light-logo_lNzGXRRlQ.webp" alt="logo" class="logo-img">
+                <p class="shery-para">Sheryians <br> coding school</p>
+            </div>
+
+            <div class="pointers">
+                <a href="#" class="link1">Home</a>
+                <a href="#" class="link1">Courses</a>
+                <a href="#" class="link1">Bootcamps</a>
+                <a href="#" class="link1">Request Callback</a>
+                <button class="pointers-btn">Sign In</button>
+            </div>
+
+            <div class="hidden-nav" onclick="clickmenu()">
+                <h1>📣</h1>
+            </div>
+
+            <div class="hidden-div">
+                <h1 class="hid" onclick="removemenu()" >X</h1>
+                <div class="side-hidden">
+                    <a href="#" class="link1">Home</a>
+                    <a href="#" class="link1">Courses</a>
+                    <a href="#" class="link1">Bootcamps</a>
+                    <a href="#" class="link1">Request Callback</a>
+                    <a href="#" class="link1">Sign In</a>
+                </div>
+                
+            </div>
+        </nav>
+        <section class="main-div">
+
+            <div class="center-div">
+                <div class="center-text">
+                    <span class="text-center1">We only <span class="teach">teach</span> </span>
+                    <span class="text-center2">what we are really </span>
+                    <span class="text-center3">really <span class="good">good</span> at.</span>
+
+                </div>
+                <div class="text-btn">
+                    <a href="#" class="courses-link">
+                        Check Courses-Make an Impact
+                    </a>
+                </div>
+            </div>
+
+            <div class="counters">
+                <div class="text-count">
+                    <h2 class="count">250k+</h2>
+                    <p class="count-para">Students taught</p>
+                </div>
+
+                <div class="text-count">
+                    <h2 class="count">20+</h2>
+                    <p class="count-para">Instructors</p>
+                </div>
+
+                <div class="text-count">
+                    <h2 class="count">625K+</h2>
+                    <p class="count-para">Youtube Subs.</p>
+                </div>
+            </div>
+
+
+        </section>
+        <div class="new-bottom-text">
+            <span class="span-bottom">
+                we do whatever it takes to help you
+            </span><br>
+
+            <span class="span-bottom1">
+                understand the concepts.</span>
+
+        </div>
+
+
+    </div>
+
+    <script>
+
+        const move = document.querySelector(".hidden-div");
+
+        function clickmenu() {
+            console.log("first")
+            move.style.transform = 'translateY(500px)';
+        }
+        function removemenu() {
+            console.log("first")
+            move.style.transform = 'translateY(-500px)';
+        }
+
+
+    </script>
+
+</body>
+
+
+</html>
