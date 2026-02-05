@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+
+        <div id="drag" draggable="true" ></div>
+        <div class="drop"></div>
+        
+    </main>
+
+
+    <style>
+
+        #drag {
+            height: 200px;
+            width: 200px;
+            border-radius: 10px;
+            background: crimson;
+        }
+        
+        .drop {
+            height: 600px;
+            width: 600px;
+            border-radius: 10px;
+            background: #13914b;
+        }
+
+    </style>
+
+
+    <script>
+
+        const dragelm = document.querySelector("#drag");
+        const dropelm = document.querySelector(".drop");
+
+
+        dragelm.addEventListener("dragstart",(e)=> {
+            e.dataTransfer.setData("text",e.target.id)
+        })
+
+        dropelm.addEventListener("dragover",(e)=> {
+            e.preventDefault()
+        })
+
+        dropelm.addEventListener("drop",(e)=> {
+            e.preventDefault();
+            console.log(e.dataTransfer)
+            let data = e.dataTransfer.getData("text");
+            console.log(data)
+            let id = document.getElementById(data);
+
+            console.log(data)
+
+            dropelm.appendChild(id)
+
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div id="drag" draggable="true"></div>
+    </main>
+
+    <style>
+        body {
+            background: #000;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            background: #2d94e9;
+        }
+
+        #drag {
+            height: 200px;
+            width: 200px;
+            border-radius: 10px;
+            background: crimson;
+            position: absolute;
+            cursor: grab;
+            /* transition: 0.1s; */
+            transition: left 0.2s ease, top 0.2s ease;
+
+        }
+    </style>
+
+
+    <script>
+
+        const dragDiv = document.querySelector("#drag");
+        const main = document.querySelector("main");
+
+        dragDiv.addEventListener("dragend", (e) => {
+            
+            e.preventDefault()
+            dragDiv.style.left = e.pageX + "px"
+            dragDiv.style.top = e.pageY + "px"
+        })
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
