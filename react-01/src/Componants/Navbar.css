@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+:root {
+    gap: 20px;
+    --white: #f0f0f0;
+    --blue: #146AE9;
+    --gray: #dfdfdf;
+    font-size: 20px;
+}
+
+
+.main {
+    background: #ff9a48;
+
+}
+
+.logo {
+    height: 55px;
+    cursor: pointer;
+}
+
+
+.navbar-div {
+    background: #fff;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 1rem;
+}
+
+.side-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.dropdown {
+    font-size: 0.79rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.bar {
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+
+}
+
+.side-nav .nav-h1 {
+    font-size: 0.77rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.global-logo .global {
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+
+}
+
+
+
+
+/* ---------navbar-div-2--------- */
+
+
+.navbar-div-2 {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    box-shadow: 0 0 8px 5px #d1d1d17a;
+}
+
+.nav-second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.nav-second .buy {
+    font-size: 0.85rem;
+}
+
+#dropdown {
+    font-size: 0.79rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.create {
+    background: var(--blue);
+    color: var(--white);
+    padding: 9px 16px;
+    margin: 4px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
