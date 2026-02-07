@@ -8,7 +8,7 @@ const [data, setData] = useState("");
 const [arr, setArr] = useState([]);
 
 const arrFun = () => {
-  setArr([...arr, data]);  // array spread karegaa aur data aayegaa to arr me chalajayegaa
+  setArr([...arr, data]);  // array spread karegaa aur data aayegaa to arr me chalajayegaa aur also dono eki saat mirahe hai ek hi array me matlab dono ka data ek hi me jahaa hai
   setData(""); // optional: clear input after submission
 };
 useEffect(() => {
