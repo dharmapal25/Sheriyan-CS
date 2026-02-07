@@ -8,7 +8,7 @@ const [data, setData] = useState("");
 const [arr, setArr] = useState([]);
 
 const arrFun = () => {
-  setArr([...arr, data]);
+  setArr([...arr, data]);  // array spread karegaa aur data aayegaa to arr me chalajayegaa
   setData(""); // optional: clear input after submission
 };
 useEffect(() => {
