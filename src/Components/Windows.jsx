@@ -6,7 +6,7 @@ const Windows = () => {
     const [maximize, setMaximize] = useState(false);
     const [zIndex, setZIndex] = useState("");
     const [maxArr, setMaxArr] = useState([500, 400]);
-    
+
     const closeTab = () => {
         setClose("close-tab-container")
     }
@@ -25,7 +25,7 @@ const Windows = () => {
         setZIndex("zIndexclick")
     }
 
-    let MathRandom = Math.floor(Math.random()*300)
+    let MathRandom = Math.floor(Math.random() * 300)
     console.log(MathRandom)
 
     return (
@@ -34,22 +34,21 @@ const Windows = () => {
 
                 {
                     data.map((wid, idx) => {
-                        
-                        let id = idx*100;
+
+                        let id = idx * 100;
                         // console.log(id)
 
                         return (
 
-                            <div key={idx+1} className={`container-div ${close}`}>
+                            <div key={idx + 1} className={`container-div ${close}`}>
                                 <Rnd className={(maximize == false) ? "maximize-tab-container-cursize" : "maximize-tab-container"}
                                     default={{
-                                        x: Math.floor(Math.random()*id),
+                                        x: Math.floor(Math.random() * id),
                                         y: -300,
                                         width: maxArr[0],
                                         height: maxArr[1],
                                     }}
                                 >
-
                                     <div className={`nav-tab ${zIndex}`} onClick={ZIndexOn} >
 
                                         <div className="tab-icons" >
@@ -92,6 +91,8 @@ const Windows = () => {
                         )
                     })
                 }
+
+                
 
 
             </div>

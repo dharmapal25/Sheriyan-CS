@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 html,
@@ -12,7 +13,91 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 /* Home.jsx */
+
+.desktop-view .mac-nav .logo-navigators .apple_logo {
+  width: 20px;
+  cursor: default;
+
+}
+
+.desktop-view .mac-nav {
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 33px;
+  background: #5e5e5e27;
+  cursor: default;
+  backdrop-filter: blur(5px);
+}
+
+.desktop-view .mac-nav .logo-navigators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 17px;
+}
+
+.icons-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.wifi-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+
+.desktop-view .mac-nav .wifi-time .icons-div .control {
+
+  height: 17px;
+}
+
+.desktop-view .mac-nav .wifi-time .icons-div .wifi {
+
+  height: 20px;
+}
+
+.desktop-view .mac-nav .wifi-time .icons-div .search {
+  height: 23px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Windows.jsx */
 
 .desktop-view {
   background: #0a0a0a;
@@ -105,13 +190,11 @@ body {
   display: none;
 }
 
-.maximize-tab-container {
+.container-div .maximize-tab-container {
   width: 99% !important;
-  height: 95% !important;
+  height: 90vh !important;
   transition: 0.2s;
-  background: #1a1a1a;
-  width: 400px;
-  height: 300px;
+  background: #750e0e;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -123,27 +206,28 @@ body {
   text-overflow: ellipsis;
 }
 
-.maximize-tab-container-cursize {
-  /* background: #7c2f2f; */
+.container-div .maximize-tab-container-cursize {
+  background: #384d66;
   width: 99%;
+  height: 100px;
   transition: 0.1s;
-
-  background: #1a1a1a;
-  width: 400px;
-  height: 300px;
+  min-width: 25vw;
+  max-width: 99vw !important;
+  min-height: 25vh;
+  max-height: 95vh !important;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px #00000080;
-  cursor: default;
-  max-width: max-content;
+  cursor: default !important;
   border-radius: 10px;
   text-overflow: ellipsis;
 }
 
 .zIndexclick {
-  position: relative;
-  z-index: 1;
-  background: green;
+  position: relative !important;
+  top: 0 !important;
+  z-index: 111 !important;
+  background: #317531;
 }
