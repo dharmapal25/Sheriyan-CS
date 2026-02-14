@@ -2,6 +2,7 @@ import React from 'react'
 import "./App.css"
 import Home from './Components/Home'
 import Tab from './Components/Tab'
+import Calculator from './Components/Pages/Calculator'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
 
       <Home />
       {/* <Tab/> */}
+      <Calculator/>
     </div >
   )
 }
