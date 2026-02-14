@@ -1,17 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Rnd } from 'react-rnd'
 const Windows = () => {
 
     const [close, setClose] = useState("");
     const [maximize, setMaximize] = useState(false);
     const [zIndex, setZIndex] = useState("");
+    const [iDx, setIDx] = useState(null);
+    const [closeData, setCloseData] = useState([])
+    console.log(closeData)
     const [maxArr, setMaxArr] = useState([500, 400]);
 
-    const closeTab = () => {
-        setClose("close-tab-container")
-    }
-
-    let data = [1, 2, 3, 4]
+    let data = [1, 2]
 
     const maxiTab = () => {
         setMaximize(!maximize)
@@ -22,7 +21,7 @@ const Windows = () => {
 
 
     const ZIndexOn = () => {
-        setZIndex("zIndexclick")
+        setZIndex("z-index")
     }
 
     let MathRandom = Math.floor(Math.random() * 300)
@@ -38,9 +37,19 @@ const Windows = () => {
                         let id = idx * 100;
                         // console.log(id)
 
+
+                        useEffect(() => {
+                            let demo = { id: idx, IsClose: false }
+                            console.log(demo)
+
+                            setCloseData([...closeData, demo])
+                        }, [])
+
+                        console.log(closeData)
+
                         return (
 
-                            <div key={idx + 1} className={`container-div ${close}`}>
+                            <div key={idx} onClick={() => { console.log("idx : ", idx); setIDx(idx) }} className={`container-div ${close}`}  >
                                 <Rnd className={(maximize == false) ? "maximize-tab-container-cursize" : "maximize-tab-container"}
                                     default={{
                                         x: Math.floor(Math.random() * id),
@@ -48,11 +57,14 @@ const Windows = () => {
                                         width: maxArr[0],
                                         height: maxArr[1],
                                     }}
+
+                                    style={{ background: "#ccg" }}
                                 >
                                     <div className={`nav-tab ${zIndex}`} onClick={ZIndexOn} >
 
                                         <div className="tab-icons" >
-                                            <div className="icon-1 " onClick={closeTab} >
+                                            <div className="icon-1 ">
+
                                                 <svg className='icons' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                                                     <path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z" />
                                                 </svg>
@@ -92,7 +104,7 @@ const Windows = () => {
                     })
                 }
 
-                
+
 
 
             </div>
@@ -100,4 +112,4 @@ const Windows = () => {
     )
 }
 
-export default Windows
+export default Windows;
