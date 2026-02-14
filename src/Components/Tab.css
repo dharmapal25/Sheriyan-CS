@@ -4,11 +4,15 @@
     box-sizing: border-box;
 }
 
+
+
+
 html,
 body {
     width: 100%;
     height: 100%;
     color: #cfcfcf;
+    font-size: 20px;
 }
 
 h1 {
@@ -16,10 +20,16 @@ h1 {
     font-size: 100px;
 }
 
+.tab-top-container .hr {
+    width: 100%;
+    height: 0.1px;
+    border: 0.1px solid #5757574d;
+    box-shadow: 0 2px 2px #91919131;
+}
 
 .tab-top-container {
     position: absolute;
-    background: #4b2424;
+    background: #272935;
     border-radius: 10px;
     margin: 5px;
     min-width: 30vw !important;
@@ -44,7 +54,7 @@ h1 {
     gap: 50px;
     padding: 9px;
     cursor: default;
-    background: #353535;
+    background: #3a3a3a83;
 }
 
 .tab-icons {

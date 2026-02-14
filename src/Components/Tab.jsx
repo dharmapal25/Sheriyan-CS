@@ -55,6 +55,8 @@ const Tab = () => {
 
             </div>
 
+            <hr className='hr' />
+
             <div className="contents-tab" draggable="false">
                 <h1>tab page</h1>
             </div>

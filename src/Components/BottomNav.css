@@ -50,7 +50,7 @@ body {
     align-items: center;
 }
 
-hr {
+.bar {
     height: 50px;
     border: 1px solid #ffffff6b;
     margin: 0 10px;

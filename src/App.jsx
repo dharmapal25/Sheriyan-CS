@@ -9,7 +9,7 @@ const App = () => {
       <img src="../src/Images/macos.jpg" className='appJsx-image' draggable="false"/>
 
       <Home />
-      <Tab/>
+      {/* <Tab/> */}
     </div >
   )
 }
